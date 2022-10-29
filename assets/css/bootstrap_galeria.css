@@ -4779,6 +4779,7 @@ fieldset:disabled .btn {
     border-radius: var(--bs-card-border-radius);
     width: 17rem;
     margin-right: 10px;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 768px){
