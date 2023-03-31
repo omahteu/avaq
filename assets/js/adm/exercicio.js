@@ -8,4 +8,5 @@ $(document).on("click", "#salvar", function() {
         data: dd
     });
     document.getElementById("add_exercicio").reset()
+    alert("Exercício adicionado!")
 })
