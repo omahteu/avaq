@@ -3,7 +3,7 @@ $(document).on("click", "#salvar", function() {
     $.ajax({
         type: 'POST',
         dataType: 'json',
-        url: "http://localhost/Suites/php/configuracoes/igs.php",
+        url: "http://localhost/avaq/assets/php/insert/exercicios.php",
         async: true,
         data: dd
     });
