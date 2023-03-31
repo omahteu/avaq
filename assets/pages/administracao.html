@@ -5,18 +5,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="shortcut icon" href="../../assets/img/world.png" type="image/x-icon">
-    <title>AVAQ | Administração</title>
-    <!-- BOOTSTRAP CORE STYLE CSS -->
-    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <title>AVAQ | Exercícios</title>
+    <!-- BOOTSTRAP CORE STYLE CSS 
+    <link href="../css/bootstrap.css" rel="stylesheet" />-->
     <!-- FONT AWESOME CSS -->
     <link href="../css/font-awesome.min.css" rel="stylesheet" />
     <!-- FLEXSLIDER CSS -->
     <link href="../css/flexslider.css" rel="stylesheet" />
     <!-- CUSTOM STYLE CSS -->
     <link href="../css/style.css" rel="stylesheet" />
+    <!--EXERCÍCIOS-->
+    <link rel="stylesheet" href="../css/exercicios.css">
     <!-- Google	Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -24,67 +31,83 @@
     <div class="navbar navbar-inverse navbar-fixed-top " id="menu">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="#">
                     <img class="logo-custom" src="../img/logo2.png" alt="logotipo do site avaq" />
                 </a>
             </div>
-            <div class="navbar-collapse collapse move-me">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">Matheus</a>
-                    </li>
-                    <li>
-                        <a href="./cexercicios.html">EXERCÍCIOS</a>
-                    </li>
-                    <li>
-                        <a href="/index.html">SAIR</a>
-                    </li>
-                </ul>
-            </div>
+            <nav class="nav">
+                <a class="nav-link" href="./aluno.html">Sair</a>
+            </nav>
         </div>
     </div>
 
     <div id="features-sec" class="container set-pad">
-        <div class="row text-center">
-            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
-                <h1 data-scroll-reveal="enter from the bottom after 0.2s" class="header-line">MURAL </h1>
-            </div>
-        </div>
-
         <div class="row">
-            <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
-                <div class="about-div">
-                    <i class="fa-solid fa-comments-o fa-4x"></i>
-                    <h3>Notificação</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo.</p>
+            <form method="post" id="add_exercicio">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Selecione a Disciplina</label>
+                    <select class="form-control" name="qd" id="qd">
+                        <option value="" hidden>Disciplina</option>
+                        <option value="">Bibliologia</option>
+                        <option value="">Introdução à Teologia</option>
+                        <option value="">Vivência Cristã</option>
+                        <option value="">Metodologia do Trabalho Acadêmico</option>
+                    </select>
                 </div>
-            </div>
-            <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
-                <div class="about-div">
-                    <i class="fa-solid fa-comments-o fa-4x"></i>
-                    <h3>notificação</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo.</p>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Questão 1</label>
+                    <input type=" text" class="form-control" name="q1" id="q1">
                 </div>
-            </div>
-            <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
-                <div class="about-div">
-                    <i class="fa-solid fa-comments-o fa-4x"></i>
-                    <h3>notificação</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo.</p>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Questão 2</label>
+                    <input type=" text" class="form-control" name="q2" id="q2">
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Questão 3</label>
+                    <input type=" text" class="form-control" name="q3" id="q3">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Questão 4</label>
+                    <input type=" text" class="form-control" name="q4" id="q4">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Questão 5</label>
+                    <input type=" text" class="form-control" name="q5" id="q5">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Questão 6</label>
+                    <input type=" text" class="form-control" name="q6" id="q6">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Questão 7</label>
+                    <input type=" text" class="form-control" name="q7" id="q7">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Questão 8</label>
+                    <input type=" text" class="form-control" name="q8" id="q8">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Questão 9</label>
+                    <input type=" text" class="form-control" name="q9" id="q9">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Questão 10</label>
+                    <input type=" text" class="form-control" name="q10" id="q10">
+                </div>
+                <br>
+                <button type="button" class="btn btn-primary" id="salvar">Salvar</button>
+                <button type="reset" class="btn btn-danger">Limpar</button>
+            </form>
         </div>
     </div>
 
+
+    <!-- FOOTER SECTION END-->
+
     <!--  Jquery Core Script -->
-    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../js/jquery.js"></script>
     <!--  Core Bootstrap Script -->
-    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <!--  Flexslider Scripts -->
     <script src="../js/jquery.flexslider.js"></script>
     <!--  Scrolling Reveal Script -->
@@ -94,5 +117,8 @@
     <!--  Custom Scripts -->
     <script src="../js/custom.js"></script>
     <script src="https://kit.fontawesome.com/88ea2c002f.js" crossorigin="anonymous"></script>
+
+    <script src="../js/adm/exercicio.js"></script>
 </body>
+
 </html>
