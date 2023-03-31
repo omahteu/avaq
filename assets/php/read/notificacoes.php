@@ -1,7 +1,7 @@
 <?php
 include "../conexao.php";
 header("Acesso-Controle-Permitir-Origem: *");
-$query = "SELECT id, remetente, destinatario, mensagem, status FROM avaqce_notificacoes";
+$query = "SELECT id, remetente, destinatario, mensagem FROM avaqce_notificacoes";
 $resultado = $conn->query($query);
 if ($resultado->num_rows > 0) {
     while($row = $resultado->fetch_assoc()) {
