@@ -1,14 +1,17 @@
-
-
-$("#acessar").click(function(){
-    let usuario = $("#usuario").val()
-    let senha = $(("#senha")).val()
-    
-    if(usuario == "prof" && senha == "123"){
-        $(location).attr('href', "./professor.html")
-    } else if(usuario == "aluno" && senha == "123"){
-        $(location).attr("href", "./aluno.html")
-    } else {
-        alert("Login Inválido!")
-    }
+$(document).on("click", "#acessar", function() {
+    validacao($("#usuario").val(), $("#senha").val())
 })
+
+async function validacao(usuario, senha) {
+    const rq = await fetch("")
+    const rs = await rq.json()
+    if (rs.filter(x => x.usuario == usuario)) {
+        if (rs.filter(y => y.senha == senha)) {
+            console.log(rs)
+        } else {
+            alert("Senha Inválida!")
+        }
+    } else {
+        alert("Usuário Inválido!")
+    }
+}
