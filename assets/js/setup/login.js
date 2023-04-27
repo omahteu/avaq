@@ -7,7 +7,8 @@ async function validacao(usuario, senha) {
     const rs = await rq.json()
     if (rs["status"] == true) {
         const dados = rs["dados"]
-        const v1 = dados.filter(x => x.usuario == usuario)
+        const v1 = dados.filter(x => x.nome == usuario)
+        console.log(v1)
         if (v1[0]["senha"] == senha) {
             if (v1[0]["tipo"] == "professor") {
                 sessionStorage.setItem("logado", v1[0]["nome"])
