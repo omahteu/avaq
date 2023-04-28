@@ -14,7 +14,6 @@ async function carregar() {
         let exe = rs["dados"]
         var nome = sessionStorage.getItem("logado")
         exe.forEach(e => {
-            console.log(e)
             $("#ficha").append(
                 `<button type="button" 
                 class="btn btn-primary confg" 
@@ -33,7 +32,7 @@ async function carregar() {
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form method="post" id="exerciciosalunos">
+                            <form method="post" id="exerciciosalunos${e.capitulo}${e.disciplina}">
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label">${e.um}:</label>
                                     <textarea class="form-control" name="q1" id="q1"></textarea>
@@ -82,7 +81,7 @@ async function carregar() {
                                 </div>
                                 <div class="modal-footer">
                                     <button type="reset" class="btn btn-secondary">Limpar</button>
-                                    <button type="button" class="btn btn-primary" id="respondendo">Enviar</button>
+                                    <button type="button" class="btn btn-primary" id="respondendo" data-toggle="${e.capitulo}${e.disciplina}">Enviar</button>
                                 </div>
                             </form>
                         </div>

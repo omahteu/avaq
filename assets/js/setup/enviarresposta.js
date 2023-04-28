@@ -1,13 +1,13 @@
 $(document).on("click", "#respondendo", function() {
-    let respostas = $("#exerciciosalunos").serialize()
-    alert(respostas)
+    let sufixo = $(this).attr("data-toggle")
+    let respostas = $(`#exerciciosalunos${sufixo}`).serialize()
     $.ajax({
         type: 'POST',
         dataType: 'json',
         url: "http://localhost/avaq/assets/php/insert/respostaexercicios.php",
         async: true,
-        data: dadosPhp
+        data: respostas
     });
-    document.getElementById("exerciciosalunos").reset()
+    document.getElementById(`#exerciciosalunos${sufixo}`).reset()
     alert("Exercício respondido com sucesso!")
 })
