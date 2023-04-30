@@ -1,6 +1,7 @@
 <?php
 include "../conexao.php";
 
+$cd = $_POST["hash"];
 $ds = $_POST["qd"];
 $cp = $_POST["cap"];
 $q1 = $_POST["q1"];
@@ -13,14 +14,14 @@ $q7 = $_POST["q7"];
 $q8 = $_POST["q8"];
 $q9 = $_POST["q9"];
 $q10 = $_POST["q10"];
-$query = "insert into avaqce_exercicios(disciplina, capitulo, um, dois, tres, quatro, cinco, seis, sete, oito, nove, dez) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+$query = "insert into avaqce_exercicios(cod, disciplina, capitulo, um, dois, tres, quatro, cinco, seis, sete, oito, nove, dez) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 if ($conn->connect_error) {
     echo "$conn->connect_error";
     die("Connection Failed : " . $conn->connect_error);
 } else {
     $stmt = $conn->prepare($query);
-    $stmt->bind_param("ssssssssssss", $ds, $cp, $q1, $q2, $q3, $q4, $q5, $q6, $q7, $q8, $q9, $q10);
+    $stmt->bind_param("sssssssssssss", $cd, $ds, $cp, $q1, $q2, $q3, $q4, $q5, $q6, $q7, $q8, $q9, $q10);
     $execval = $stmt->execute();
     $stmt->close();
     $conn->close();

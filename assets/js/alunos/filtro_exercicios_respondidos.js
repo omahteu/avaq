@@ -1,9 +1,9 @@
 $(document).ready(function(){
-    filtrando_exibicao()
+    //filtrando_exibicao()
     // pegarDiferenca()
 })
 
-async function filtrando_exibicao(){
+export default async function filtrando_exibicao(){
     var caixa1 = []
     var caixa2 = []
     const rq1 = await fetch("http://localhost/avaq/assets/php/read/exercicios.php")
@@ -14,13 +14,15 @@ async function filtrando_exibicao(){
         let res1 = rs1["dados"]
         let res2 = rs2["dados"]
         res1.forEach(e => {
-            caixa1.push(e.disciplina)
+            caixa1.push(e.cod)
         });
         res2.forEach(e => {
-            caixa2.push(e.disciplina)
+            caixa2.push(e.cod)
         });
+
+
         let r3 = caixa1.filter( a => !caixa2.includes( a ) );
-        console.log(r3)
+        return r3
     }
 }
 

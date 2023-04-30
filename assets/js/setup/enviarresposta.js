@@ -1,6 +1,7 @@
 $(document).on("click", "#respondendo", function() {
     let sufixo = $(this).attr("data-toggle")
-    let respostas = $(`#exerciciosalunos${sufixo}`).serialize()
+    let ide = `#exerciciosalunos${sufixo}`
+    let respostas = $(ide).serialize()
     $.ajax({
         type: 'POST',
         dataType: 'json',
@@ -8,6 +9,6 @@ $(document).on("click", "#respondendo", function() {
         async: true,
         data: respostas
     });
-    document.getElementById(`#exerciciosalunos${sufixo}`).reset()
+    $(ide). each (function(){ this. reset(); })
     alert("Exercício respondido com sucesso!")
 })
