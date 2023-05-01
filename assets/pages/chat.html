@@ -40,10 +40,26 @@
     </div>
 
     <div id="features-sec" class="container set-pad">
-
-        <h1>Chat ao vivo</h1>
-        <button type="button" class="btn btn-primary">Participar</button>
-
+        <form>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Disciplina</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option hidden></option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>          
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Mensagem</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div>
+                <button type="button" class="btn btn-success">Enviar</button>
+                <button type="reset" class="btn btn-danger">Limpar</button>
+            </div>
+        </form>
     </div>
 
 
