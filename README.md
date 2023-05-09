@@ -4,7 +4,7 @@
 
 Plataforma educacional pertencente à Igreja do Evangelho Quadrangular do estado do Ceará.
 
-HTML 5
+HTML 5 <br>
 CSS 3
 Bootstrap v3.2.0
 PHP
