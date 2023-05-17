@@ -8,10 +8,10 @@ async function carregar() {
     var caixa1 = [];
     var caixa2 = [];
     const rq1 = await fetch(
-        "http://localhost/avaq/assets/php/read/exercicios.php"
+        "http://localhost/avaq/assets/php/read/respostas.php"
     );
     const rq2 = await fetch(
-        "http://localhost/avaq/assets/php/read/respostas.php"
+        "http://localhost/avaq/assets/php/read/correcoes.php"
     );
     const rs1 = await rq1.json();
     const rs2 = await rq2.json();
@@ -51,7 +51,7 @@ async function carregar() {
                                 <div class="modal-body">
                                     <form method="post" id="exerciciosalunos${e.capitulo}${e.disciplina}">
                                         <div class="form-group">
-                                            <label for="message-text" class="col-form-label">${e.um}:</label>
+                                            <label for="message-text" class="col-form-label">Questão 1:</label>
                                             <textarea class="form-control" name="q1" id="q1"></textarea>
                                         </div>
                                         <div class="form-group">
@@ -120,15 +120,31 @@ async function carregar() {
         });
     } else {
         let exe = rs1["dados"];
+        console.log(exe)
         try {
             exe.forEach((e) => {
                 $("#ficha").append(
-                    `<button type="button" 
-                    class="btn btn-primary confg" 
-                    data-toggle="modal" 
-                    data-target="#tarja${e.capitulo}${e.disciplina}">${
-                        disc[e.disciplina]
-                    } ${e.capitulo}</button>`
+                    // `<button type="button" 
+                    // class="btn btn-primary confg" 
+                    // data-toggle="modal" 
+                    // data-target="#tarja${e.capitulo}${e.disciplina}">${
+                    //     disc[e.disciplina]
+                    // } ${e.capitulo}</button>`+
+                    // `<input type="text">`
+                    `
+                    <form class="form-inline">
+                        <div class="form-group mb-2">
+                            <label for="staticEmail2" class="sr-only">Email</label>
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+                        </div>
+                        <div class="form-group mb-2">
+                            
+                            <input type="text" class="form-control" id="nota" placeholder="Nota">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+                    </form>
+                    <br>
+                    `
                 );
                 $("#features-sec").append(
                     `

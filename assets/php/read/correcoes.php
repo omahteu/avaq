@@ -1,7 +1,7 @@
 <?php
 include "../conexao.php";
 header("Acesso-Controle-Permitir-Origem: *");
-$query = "SELECT id, cod, rm, disciplina, capitulo, um, dois, tres, quatro, cinco, seis, sete, oito, nove, dez FROM avaqce_respostas";
+$query = "SELECT id, cod, rm, disciplina, capitulo, um, dois, tres, quatro, cinco, seis, sete, oito, nove, dez, nota FROM avaqce_correcoesa";
 $resultado = $conn->query($query);
 if ($resultado->num_rows > 0) {
     while($row = $resultado->fetch_assoc()) {
@@ -20,7 +20,8 @@ if ($resultado->num_rows > 0) {
             'sete' => $row["sete"],
             'oito' => $row["oito"],
             'nove' => $row["nove"],
-            'dez' => $row["dez"]
+            'dez' => $row["dez"],
+            'nota' => $row["nota"]
         ];
     }
     $retorna = ['status' => true, 'dados' => $dados];
