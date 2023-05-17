@@ -30,87 +30,79 @@ async function carregar() {
             if (r3.includes(e.cod)) {
                 try {
                     $("#ficha").append(
-                        `<button type="button" 
-                        class="btn btn-primary confg" 
-                        data-toggle="modal" 
-                        data-target="#tarja${e.capitulo}${e.disciplina}">${
-                            disc[e.disciplina]
-                        } ${e.capitulo}</button>`
+                        `
+                        <div class="card w-50">
+                            <div class="card-body">
+                                <h5 class="card-title">${disc[e.disciplina]} ${e.capitulo}</h5>
+                                <p class="card-text">Leia as respostas e dê uma nota para o aluno.</p>
+                                <button type="button" class="btn btn-primary confg" data-toggle="modal" data-target="#tarja${e.capitulo}${e.disciplina}">Ver Respostas</button>
+                            </div>
+                        </div>
+                        `
                     );
                     $("#features-sec").append(
                         `
                         <div class="modal fade" id="tarja${e.capitulo}${e.disciplina}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Auto Atividade</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form method="post" id="exerciciosalunos${e.capitulo}${e.disciplina}">
-                                        <div class="form-group">
-                                            <label for="message-text" class="col-form-label">Questão 1:</label>
-                                            <textarea class="form-control" name="q1" id="q1"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="message-text" class="col-form-label">${e.dois}:</label>
-                                            <textarea class="form-control" name="q2" id="q2"></textarea>
-                                        </div>
-                                            <div class="form-group">
-                                            <label for="message-text" class="col-form-label">${e.tres}:</label>
-                                            <textarea class="form-control" name="q3" id="q3"></textarea>
-                                        </div>
-                                            <div class="form-group">
-                                            <label for="message-text" class="col-form-label">${e.quatro}:</label>
-                                            <textarea class="form-control" name="q4" id="q4"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="message-text" class="col-form-label">${e.cinco}:</label>
-                                            <textarea class="form-control" name="q5" id="q5"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="message-text" class="col-form-label">${e.seis}:</label>
-                                            <textarea class="form-control" name="q6" id="q6"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="message-text" class="col-form-label">${e.sete}:</label>
-                                            <textarea class="form-control" name="q7" id="q7"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="message-text" class="col-form-label">${e.oito}:</label>
-                                            <textarea class="form-control" name="q8" id="q8"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="message-text" class="col-form-label">${e.nove}:</label>
-                                            <textarea class="form-control" name="q9" id="q9"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="message-text" class="col-form-label">${e.dez}:</label>
-                                            <textarea class="form-control" name="q10" id="q10"></textarea>
-                                        </div>
-                                        <div class="form-group" hidden>
-                                            <input type="text" name="disciplina" id="disciplina" value="${e.disciplina}">
-                                        </div>
-                                        <div class="form-group" hidden>
-                                            <input type="text" name="aluno" id="aluno" value="${nome}">
-                                        </div>
-                                        <div class="form-group" hidden>
-                                            <input type="text" name="hash" id="hash" value="${e.cod}">
-                                        </div>
-                                        <div class="form-group" hidden>
-                                        <input type="text" name="capi" id="capi" value="${e.capitulo}">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Respostas | ${e.rm}</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
                                     </div>
-                                        <div class="modal-footer">
-                                            <button type="reset" class="btn btn-secondary">Limpar</button>
-                                            <button type="button" class="btn btn-primary" id="respondendo" data-toggle="${e.capitulo}${e.disciplina}">Enviar</button>
+                                    <div class="modal-body">
+                                        <form method="post" id="exerciciosalunos${e.capitulo}${e.disciplina}">
+                                            <div class="form-group">
+                                                <label for="message-text" class="col-form-label">Questão 1:</label>
+                                                <textarea class="form-control" name="q1" id="q1" placeholder="${e.um}" readonly></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="col-form-label">Questão 2:</label>
+                                                <textarea class="form-control" name="q2" id="q2" placeholder="${e.dois}" readonly></textarea>
+                                            </div>
+                                                <div class="form-group">
+                                                <label for="message-text" class="col-form-label">Questão 3:</label>
+                                                <textarea class="form-control" name="q3" id="q3" placeholder="${e.tres}" readonly></textarea>
+                                            </div>
+                                                <div class="form-group">
+                                                <label for="message-text" class="col-form-label">Questão 4:</label>
+                                                <textarea class="form-control" name="q4" id="q4" placeholder="${e.quatro}" readonly></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="col-form-label">Questão 5:</label>
+                                                <textarea class="form-control" name="q5" id="q5" placeholder="${e.cinco}" readonly></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="col-form-label">Questão 6:</label>
+                                                <textarea class="form-control" name="q6" id="q6" placeholder="${e.seis}" readonly></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="col-form-label">Questão 7:</label>
+                                                <textarea class="form-control" name="q7" id="q7" placeholder="${e.sete}" readonly></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="col-form-label">Questão 8:</label>
+                                                <textarea class="form-control" name="q8" id="q8" placeholder="${e.oito}" readonly></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="col-form-label">Questão 9:</label>
+                                                <textarea class="form-control" name="q9" id="q9" placeholder="${e.nove}" readonly></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="col-form-label">Questão 10:</label>
+                                                <textarea class="form-control" name="q10" id="q10" placeholder="${e.dez}" readonly></textarea>
+                                            </div>
                                         </div>
-                                    </form>
+                                        <div class="modal-footer">
+                                            <input text="text" placeholder="Nota">
+                                            <button type="button" class="btn btn-primary" id="respondendo" data-toggle="${e.capitulo}${e.disciplina}">Enviar Nota</button>
+                                        </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                         `
                     );
                 } catch (error) {
@@ -120,7 +112,6 @@ async function carregar() {
         });
     } else {
         let exe = rs1["dados"];
-        console.log(exe)
         try {
             exe.forEach((e) => {
                 $("#ficha").append(
@@ -137,66 +128,66 @@ async function carregar() {
                 $("#features-sec").append(
                     `
                     <div class="modal fade" id="tarja${e.capitulo}${e.disciplina}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Respostas | ${e.rm}</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <form method="post" id="exerciciosalunos${e.capitulo}${e.disciplina}">
-                                    <div class="form-group">
-                                        <label for="message-text" class="col-form-label">Questão 1:</label>
-                                        <textarea class="form-control" name="q1" id="q1" placeholder="${e.um}" readonly></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="message-text" class="col-form-label">Questão 2:</label>
-                                        <textarea class="form-control" name="q2" id="q2" placeholder="${e.dois}" readonly></textarea>
-                                    </div>
-                                        <div class="form-group">
-                                        <label for="message-text" class="col-form-label">Questão 3:</label>
-                                        <textarea class="form-control" name="q3" id="q3" placeholder="${e.tres}" readonly></textarea>
-                                    </div>
-                                        <div class="form-group">
-                                        <label for="message-text" class="col-form-label">Questão 4:</label>
-                                        <textarea class="form-control" name="q4" id="q4" placeholder="${e.quatro}" readonly></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="message-text" class="col-form-label">Questão 5:</label>
-                                        <textarea class="form-control" name="q5" id="q5" placeholder="${e.cinco}" readonly></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="message-text" class="col-form-label">Questão 6:</label>
-                                        <textarea class="form-control" name="q6" id="q6" placeholder="${e.seis}" readonly></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="message-text" class="col-form-label">Questão 7:</label>
-                                        <textarea class="form-control" name="q7" id="q7" placeholder="${e.sete}" readonly></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="message-text" class="col-form-label">Questão 8:</label>
-                                        <textarea class="form-control" name="q8" id="q8" placeholder="${e.oito}" readonly></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="message-text" class="col-form-label">Questão 9:</label>
-                                        <textarea class="form-control" name="q9" id="q9" placeholder="${e.nove}" readonly></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="message-text" class="col-form-label">Questão 10:</label>
-                                        <textarea class="form-control" name="q10" id="q10" placeholder="${e.dez}" readonly></textarea>
-                                    </div>
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Respostas | ${e.rm}</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
-                                <div class="modal-footer">
-                                    <input text="text" placeholder="Nota">
-                                    <button type="button" class="btn btn-primary" id="respondendo" data-toggle="${e.capitulo}${e.disciplina}">Enviar Nota</button>
+                                <div class="modal-body">
+                                    <form method="post" id="exerciciosalunos${e.capitulo}${e.disciplina}">
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Questão 1:</label>
+                                            <textarea class="form-control" name="q1" id="q1" placeholder="${e.um}" readonly></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Questão 2:</label>
+                                            <textarea class="form-control" name="q2" id="q2" placeholder="${e.dois}" readonly></textarea>
+                                        </div>
+                                            <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Questão 3:</label>
+                                            <textarea class="form-control" name="q3" id="q3" placeholder="${e.tres}" readonly></textarea>
+                                        </div>
+                                            <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Questão 4:</label>
+                                            <textarea class="form-control" name="q4" id="q4" placeholder="${e.quatro}" readonly></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Questão 5:</label>
+                                            <textarea class="form-control" name="q5" id="q5" placeholder="${e.cinco}" readonly></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Questão 6:</label>
+                                            <textarea class="form-control" name="q6" id="q6" placeholder="${e.seis}" readonly></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Questão 7:</label>
+                                            <textarea class="form-control" name="q7" id="q7" placeholder="${e.sete}" readonly></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Questão 8:</label>
+                                            <textarea class="form-control" name="q8" id="q8" placeholder="${e.oito}" readonly></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Questão 9:</label>
+                                            <textarea class="form-control" name="q9" id="q9" placeholder="${e.nove}" readonly></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Questão 10:</label>
+                                            <textarea class="form-control" name="q10" id="q10" placeholder="${e.dez}" readonly></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <input text="text" placeholder="Nota">
+                                        <button type="button" class="btn btn-primary" id="respondendo" data-toggle="${e.capitulo}${e.disciplina}">Enviar Nota</button>
+                                    </div>
+                                    </form>
                                 </div>
-                                </form>
                             </div>
                         </div>
                     </div>
-                </div>
                     `
                 );
             });
