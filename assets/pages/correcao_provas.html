@@ -11,7 +11,7 @@
             href="../../assets/img/world.png"
             type="image/x-icon"
         />
-        <title>AVAQ | Provas</title>
+        <title>AVAQ | Correção</title>
         <!-- BOOTSTRAP CORE STYLE CSS 
     <link href="../css/bootstrap.css" rel="stylesheet" />-->
         <!-- FONT AWESOME CSS -->
@@ -19,9 +19,7 @@
         <!-- FLEXSLIDER CSS -->
         <link href="../css/flexslider.css" rel="stylesheet" />
         <!-- CUSTOM STYLE CSS -->
-        <link href="../css/style.css" rel="stylesheet" />
-        <!--EXERCÍCIOS-->
-        <link rel="stylesheet" href="../css/exercicios.css" />
+        <link href="../css/style_correcao.css" rel="stylesheet" />
         <!-- Google	Fonts -->
         <link
             href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300"
@@ -43,30 +41,36 @@
     </head>
 
     <body>
-        <div class="navbar navbar-inverse navbar-fixed-top" id="menu">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">
-                        <img
-                            class="logo-custom"
-                            src="../img/logo2.png"
-                            alt="logotipo do site avaq"
-                        />
-                    </a>
+        <!-- Header -->
+        <header>
+            <div class="navbar navbar-inverse navbar-fixed-top" id="menu">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <img
+                                class="logo-custom"
+                                src="../img/logo2.png"
+                                alt="logotipo do site avaq"
+                            />
+                        </a>
+                    </div>
+                    <nav class="nav">
+                        <a class="nav-link" href="./professor.html">Sair</a>
+                    </nav>
                 </div>
-                <nav class="nav">
-                    <a class="nav-link" href="./aluno.html">Sair</a>
-                </nav>
             </div>
-        </div>
+        </header>
+        <!-- Header -->
 
-        <div id="features-sec" class="container set-pad">
-            <div id="ficha">
-                <h2 id="nome_disciplina"></h2>
+        <!-- Main -->
+        <main>
+            <div id="features-sec" class="container set-pad">
+                <div id="ficha">
+                    <h2 id="nome_disciplina"></h2>
+                </div>
             </div>
-        </div>
-
-        <!-- FOOTER SECTION END-->
+        </main>
+        <!-- Main -->
 
         <!--  Jquery Core Script -->
         <script src="../js/jquery.js"></script>
@@ -84,11 +88,8 @@
             src="https://kit.fontawesome.com/88ea2c002f.js"
             crossorigin="anonymous"
         ></script>
+        <script type="module" src="../js/prof/carrega_respostas_alunos_provas.js"></script>
 
-        <script type="module" src="../js/alunos/carrega_provas.js"></script>
-
-        <script src="../js/setup/enviarrespostaprovas.js"></script>
-
-        <!-- <script type="module" src="../js/alunos/filtro_exercicios_respondidos.js"></script> -->
+        <script src="../js/prof/enviar_notas_provas.js"></script>
     </body>
 </html>
