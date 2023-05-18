@@ -1,9 +1,4 @@
-$(document).on("change", "#qd", function () {
-  var prefixo = $(this).val();
-  $("#hash").val(`${prefixo}${getPassword()}`);
-});
-
-function getPassword() {
+export function hash() {
   var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var passwordLength = 5;
   var password = "";

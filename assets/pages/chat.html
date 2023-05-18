@@ -59,10 +59,10 @@
         </div>
 
         <div id="features-sec" class="container set-pad">
-            <form>
+            <form method="post" id="comentarios">
                 <div class="form-group">
                     <label for="disciplinas">Disciplina</label>
-                    <select class="form-control" id="disciplinas">
+                    <select class="form-control" name="disciplinas" id="disciplinas">
                         <option hidden></option>
                     </select>
                 </div>
@@ -70,6 +70,7 @@
                     <label for="mensagem">Mensagem</label>
                     <textarea
                         class="form-control"
+                        name="mensagem"
                         id="mensagem"
                         rows="3"
                     ></textarea>
@@ -117,6 +118,6 @@
 
         <script src="../js/set_disciplinas.js"></script>
 
-        <script src="../js/enviarquestao.js"></script>
+        <script type="module" src="../js/enviarquestao.js"></script>
     </body>
 </html>
