@@ -55,47 +55,51 @@ async function carregar() {
                                         <form method="post" id="exerciciosalunos${e.capitulo}${e.disciplina}">
                                             <div class="form-group">
                                                 <label for="message-text" class="col-form-label">Questão 1:</label>
-                                                <textarea class="form-control" name="q1" id="q1" placeholder="${e.um}" readonly></textarea>
+                                                <input class="form-control" name="q1" id="q1" value="${e.um}" readonly>
                                             </div>
                                             <div class="form-group">
                                                 <label for="message-text" class="col-form-label">Questão 2:</label>
-                                                <textarea class="form-control" name="q2" id="q2" placeholder="${e.dois}" readonly></textarea>
+                                                <input class="form-control" name="q2" id="q2" value="${e.dois}" readonly>
                                             </div>
                                                 <div class="form-group">
                                                 <label for="message-text" class="col-form-label">Questão 3:</label>
-                                                <textarea class="form-control" name="q3" id="q3" placeholder="${e.tres}" readonly></textarea>
+                                                <input class="form-control" name="q3" id="q3" value="${e.tres}" readonly>
                                             </div>
                                                 <div class="form-group">
                                                 <label for="message-text" class="col-form-label">Questão 4:</label>
-                                                <textarea class="form-control" name="q4" id="q4" placeholder="${e.quatro}" readonly></textarea>
+                                                <input class="form-control" name="q4" id="q4" value="${e.quatro}" readonly>
                                             </div>
                                             <div class="form-group">
                                                 <label for="message-text" class="col-form-label">Questão 5:</label>
-                                                <textarea class="form-control" name="q5" id="q5" placeholder="${e.cinco}" readonly></textarea>
+                                                <input class="form-control" name="q5" id="q5" value="${e.cinco}" readonly>
                                             </div>
                                             <div class="form-group">
                                                 <label for="message-text" class="col-form-label">Questão 6:</label>
-                                                <textarea class="form-control" name="q6" id="q6" placeholder="${e.seis}" readonly></textarea>
+                                                <input class="form-control" name="q6" id="q6" value="${e.seis}" readonly>
                                             </div>
                                             <div class="form-group">
                                                 <label for="message-text" class="col-form-label">Questão 7:</label>
-                                                <textarea class="form-control" name="q7" id="q7" placeholder="${e.sete}" readonly></textarea>
+                                                <input class="form-control" name="q7" id="q7" value="${e.sete}" readonly>
                                             </div>
                                             <div class="form-group">
                                                 <label for="message-text" class="col-form-label">Questão 8:</label>
-                                                <textarea class="form-control" name="q8" id="q8" placeholder="${e.oito}" readonly></textarea>
+                                                <input class="form-control" name="q8" id="q8" value="${e.oito}" readonly>
                                             </div>
                                             <div class="form-group">
                                                 <label for="message-text" class="col-form-label">Questão 9:</label>
-                                                <textarea class="form-control" name="q9" id="q9" placeholder="${e.nove}" readonly></textarea>
+                                                <input class="form-control" name="q9" id="q9" value="${e.nove}" readonly>
                                             </div>
                                             <div class="form-group">
                                                 <label for="message-text" class="col-form-label">Questão 10:</label>
-                                                <textarea class="form-control" name="q10" id="q10" placeholder="${e.dez}" readonly></textarea>
+                                                <input class="form-control" name="q10" id="q10" value="${e.dez}" readonly>
                                             </div>
+                                            <input type="text" id="ha" name="ha" value="${e.cod}" hidden>
+                                            <input type="text" id="rm" name="rm" value="${e.rm}" hidden>
+                                            <input type="text" id="ds" name="ds" value="${e.disciplina}" hidden>
+                                            <input type="text" id="cap" name="cap" value="${e.capitulo  }" hidden>
                                         </div>
                                         <div class="modal-footer">
-                                            <input text="text" placeholder="Nota">
+                                            <input text="text" id="nota" name="nota" placeholder="Nota">
                                             <button type="button" class="btn btn-primary" id="respondendo" data-toggle="${e.capitulo}${e.disciplina}">Enviar Nota</button>
                                         </div>
                                         </form>
@@ -140,47 +144,51 @@ async function carregar() {
                                     <form method="post" id="exerciciosalunos${e.capitulo}${e.disciplina}">
                                         <div class="form-group">
                                             <label for="message-text" class="col-form-label">Questão 1:</label>
-                                            <textarea class="form-control" name="q1" id="q1" placeholder="${e.um}" readonly></textarea>
+                                            <input class="form-control" name="q1" id="q1" value="${e.um}" readonly
                                         </div>
                                         <div class="form-group">
                                             <label for="message-text" class="col-form-label">Questão 2:</label>
-                                            <textarea class="form-control" name="q2" id="q2" placeholder="${e.dois}" readonly></textarea>
+                                            <input class="form-control" name="q2" id="q2" value="${e.dois}" readonly>
                                         </div>
                                             <div class="form-group">
                                             <label for="message-text" class="col-form-label">Questão 3:</label>
-                                            <textarea class="form-control" name="q3" id="q3" placeholder="${e.tres}" readonly></textarea>
+                                            <input class="form-control" name="q3" id="q3" value="${e.tres}" readonly>
                                         </div>
                                             <div class="form-group">
                                             <label for="message-text" class="col-form-label">Questão 4:</label>
-                                            <textarea class="form-control" name="q4" id="q4" placeholder="${e.quatro}" readonly></textarea>
+                                            <input class="form-control" name="q4" id="q4" value="${e.quatro}" readonly>
                                         </div>
                                         <div class="form-group">
                                             <label for="message-text" class="col-form-label">Questão 5:</label>
-                                            <textarea class="form-control" name="q5" id="q5" placeholder="${e.cinco}" readonly></textarea>
+                                            <input class="form-control" name="q5" id="q5" value="${e.cinco}" readonly>
                                         </div>
                                         <div class="form-group">
                                             <label for="message-text" class="col-form-label">Questão 6:</label>
-                                            <textarea class="form-control" name="q6" id="q6" placeholder="${e.seis}" readonly></textarea>
+                                            <input class="form-control" name="q6" id="q6" value="${e.seis}" readonly>
                                         </div>
                                         <div class="form-group">
                                             <label for="message-text" class="col-form-label">Questão 7:</label>
-                                            <textarea class="form-control" name="q7" id="q7" placeholder="${e.sete}" readonly></textarea>
+                                            <input class="form-control" name="q7" id="q7" value="${e.sete}" readonly>
                                         </div>
                                         <div class="form-group">
                                             <label for="message-text" class="col-form-label">Questão 8:</label>
-                                            <textarea class="form-control" name="q8" id="q8" placeholder="${e.oito}" readonly></textarea>
+                                            <input class="form-control" name="q8" id="q8" value="${e.oito}" readonly>
                                         </div>
                                         <div class="form-group">
                                             <label for="message-text" class="col-form-label">Questão 9:</label>
-                                            <textarea class="form-control" name="q9" id="q9" placeholder="${e.nove}" readonly></textarea>
+                                            <input class="form-control" name="q9" id="q9" value="${e.nove}" readonly>
                                         </div>
                                         <div class="form-group">
                                             <label for="message-text" class="col-form-label">Questão 10:</label>
-                                            <textarea class="form-control" name="q10" id="q10" placeholder="${e.dez}" readonly></textarea>
+                                            <input class="form-control" name="q10" id="q10" value="${e.dez}" readonly>
                                         </div>
+                                        <input type="text" id="ha" name="ha" value="${e.cod}" hidden>
+                                        <input type="text" id="rm" name="rm" value="${e.rm}" hidden>
+                                        <input type="text" id="ds" name="ds" value="${e.disciplina}" hidden>
+                                        <input type="text" id="cap" name="cap" value="${e.capitulo  }" hidden>
                                     </div>
                                     <div class="modal-footer">
-                                        <input text="text" placeholder="Nota">
+                                        <input text="text" id="nota" name="nota" placeholder="Nota">
                                         <button type="button" class="btn btn-primary" id="respondendo" data-toggle="${e.capitulo}${e.disciplina}">Enviar Nota</button>
                                     </div>
                                     </form>
