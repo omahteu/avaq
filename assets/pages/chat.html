@@ -59,15 +59,18 @@
         </form>
         <br />
         <div class="table-responsive">
-            <table class="table">
-                <thead>
+            <table class="table" id="chats_tabs">
+                <!-- <thead>
                     <tr>
+                        <th>Aluno(a)</th>
                         <th>Data</th>
                         <th>Disciplina</th>
                         <th>Mensagem</th>
+                        <th>Resposta</th>
+                        <th></th>
                     </tr>
                 </thead>
-                <tbody id="lista_notas_aluno_provas"></tbody>
+                <tbody id="listar_chats_abertos"></tbody> -->
             </table>
         </div>
     </div>
@@ -88,11 +91,15 @@
     <script src="../js/custom.js"></script>
     <script src="https://kit.fontawesome.com/88ea2c002f.js" crossorigin="anonymous"></script>
 
-    <script src="../js/set_disciplinas.js"></script>
+    <script type="module" src="../js/set_disciplinas.js"></script>
+
+    <script src="../js/set_alunos.js"></script>
 
     <script type="module" src="../js/set_rmhash.js"></script>
 
     <script type="module" src="../js/enviarquestao.js"></script>
+
+    <script type="module" src="../js/prof/carrega_chats.js"></script>
 </body>
 
 </html>
