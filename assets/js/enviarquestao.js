@@ -1,12 +1,13 @@
 $(document).on("click", "#comentar", function() {
     let respostas = $("#comentarios").serialize()
-    $.ajax({
-        type: 'POST',
-        dataType: 'json',
-        url: "http://localhost/avaq/assets/php/insert/chat.php",
-        async: true,
-        data: respostas
-    });
-    $("#comentarios"). each (function(){ this. reset(); })
-    alert("Exercício respondido com sucesso!")
+    console.log(respostas)
+    // $.ajax({
+    //     type: 'POST',
+    //     dataType: 'json',
+    //     url: "http://localhost/avaq/assets/php/insert/chat.php",
+    //     async: true,
+    //     data: respostas
+    // });
+    // $("#comentarios"). each (function(){ this. reset(); })
+    // alert("Exercício respondido com sucesso!")
 })
