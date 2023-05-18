@@ -1,6 +1,6 @@
 export function hash() {
   var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var passwordLength = 5;
+  var passwordLength = 6;
   var password = "";
 
   for (var i = 0; i < passwordLength; i++) {
