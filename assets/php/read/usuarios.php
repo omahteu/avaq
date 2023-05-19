@@ -1,7 +1,7 @@
 <?php
 include "../conexao.php";
 header("Acesso-Controle-Permitir-Origem: *");
-$query = "SELECT id, usuario, nome, senha, tipo FROM avaqce_usuarios";
+$query = "SELECT id, usuario, nome, senha, tipo, disciplina FROM avaqce_usuarios";
 $resultado = $conn->query($query);
 if ($resultado->num_rows > 0) {
     while($row = $resultado->fetch_assoc()) {
@@ -10,7 +10,8 @@ if ($resultado->num_rows > 0) {
             'usuario' => $row["usuario"],
             'nome' => $row["nome"],
             'senha' => $row["senha"],
-            'tipo' => $row["tipo"]
+            'tipo' => $row["tipo"],
+            'disciplina' => $row["disciplina"]
         ];
     }
     $retorna = ['status' => true, 'dados' => $dados];

@@ -8,13 +8,16 @@ async function validacao(usuario, senha) {
     if (rs["status"] == true) {
         const dados = rs["dados"]
         const v1 = dados.filter(x => x.nome == usuario)
-        console.log(v1)
         if (v1[0]["senha"] == senha) {
             if (v1[0]["tipo"] == "professor") {
                 sessionStorage.setItem("logado", v1[0]["nome"])
+                sessionStorage.setItem("tipo", "professor")
+                sessionStorage.setItem("disc", v1[0]["disciplina"])
                 window.location.href = "http://localhost/avaq/assets/pages/professor.html";
             } else {
                 sessionStorage.setItem("logado", v1[0]["nome"])
+                sessionStorage.setItem("tipo", "professor")
+                sessionStorage.setItem("disc", "")
                 window.location.href = "http://localhost/avaq/assets/pages/aluno.html";
             }
         } else {
