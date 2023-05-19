@@ -1,3 +1,5 @@
+import {urlHomologacaoLeitura} from "../urls.js"
+
 $(document).ready(function () {
     formatchat()
     chats_ativos()
@@ -22,7 +24,7 @@ function formatchat() {
 }
 
 async function chats_ativos() {
-    const rq = await fetch("http://localhost/avaq/assets/php/read/chats.php")
+    const rq = await fetch(`${urlHomologacaoLeitura}chats.php`)
     const rs = await rq.json()
     const nome = sessionStorage.getItem("logado")
     const disc = sessionStorage.getItem("disc")

@@ -1,4 +1,5 @@
 import { disc } from "../disciplinas.js";
+import {urlHomologacaoLeitura} from "../urls.js"
 
 $(document).ready(function () {
     carregar();
@@ -6,9 +7,7 @@ $(document).ready(function () {
 
 async function carregar() {
     var caixa1 = [];
-    const rq1 = await fetch(
-        "http://localhost/avaq/assets/php/read/notas_provas.php"
-    );
+    const rq1 = await fetch(`${urlHomologacaoLeitura}notas_provas.php`);
     const rs1 = await rq1.json();
     let nome = sessionStorage.getItem("logado");
     if (rs1["status"]) {

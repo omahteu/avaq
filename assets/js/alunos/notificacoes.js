@@ -1,7 +1,8 @@
+import {urlHomologacaoLeitura} from "../urls.js"
+
 async function ler_notificacoes(){
-    const rq = await fetch("http://localhost/avaq/assets/php/read/notificacoes.php")
+    const rq = await fetch(`${urlHomologacaoLeitura}notificacoes.php`)
     const rs = await rq.json()
-    
     if (rs["status"] == true) {
         const vf = rs["dados"]
         vf.forEach(e => {

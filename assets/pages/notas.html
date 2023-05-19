@@ -1,123 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, maximum-scale=1"
-        />
-        <link
-            rel="shortcut icon"
-            href="../../assets/img/world.png"
-            type="image/x-icon"
-        />
-        <title>AVAQ | Notas</title>
-        <!-- BOOTSTRAP CORE STYLE CSS 
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="shortcut icon" href="../../assets/img/world.png" type="image/x-icon" />
+    <title>AVAQ | Notas</title>
+    <!-- BOOTSTRAP CORE STYLE CSS 
     <link href="../css/bootstrap.css" rel="stylesheet" />-->
-        <!-- FONT AWESOME CSS -->
-        <link href="../css/font-awesome.min.css" rel="stylesheet" />
-        <!-- FLEXSLIDER CSS -->
-        <link href="../css/flexslider.css" rel="stylesheet" />
-        <!-- CUSTOM STYLE CSS -->
-        <link href="../css/style_correcao.css" rel="stylesheet" />
-        <!-- Google	Fonts -->
-        <link
-            href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300"
-            rel="stylesheet"
-            type="text/css"
-        />
+    <!-- FONT AWESOME CSS -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+    <!-- FLEXSLIDER CSS -->
+    <link href="../css/flexslider.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="../css/style_correcao.css" rel="stylesheet" />
+    <!-- Google	Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300" rel="stylesheet" type="text/css" />
 
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-            crossorigin="anonymous"
-        />
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-            crossorigin="anonymous"
-        ></script>
-    </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</head>
 
-    <body>
-        <!-- Header -->
-        <header>
-            <div class="navbar navbar-inverse navbar-fixed-top" id="menu">
-                <div class="container">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="#">
-                            <img
-                                class="logo-custom"
-                                src="../img/logo2.png"
-                                alt="logotipo do site avaq"
-                            />
-                        </a>
-                    </div>
-                    <nav class="nav">
-                        <a class="nav-link" href="./professor.html">Sair</a>
-                    </nav>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar navbar-inverse navbar-fixed-top" id="menu">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img class="logo-custom" src="../img/logo2.png" alt="logotipo do site avaq" />
+                    </a>
                 </div>
+                <nav class="nav">
+                    <a class="nav-link" href="./professor.html">Sair</a>
+                </nav>
             </div>
-        </header>
-        <!-- Header -->
+        </div>
+    </header>
+    <!-- Header -->
 
-        <!-- Main -->
-        <main>
-            <div id="features-sec" class="container set-pad">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Tipo</th>
-                                <th>Disciplina</th>
-                                <th>Capítulo</th>
-                                <th>Nota</th>
-                            </tr>
-                        </thead>
-                        <tbody id="lista_notas_aluno"></tbody>
-                    </table>
-                </div>
+    <!-- Main -->
+    <main>
+        <div id="features-sec" class="container set-pad">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Disciplina</th>
+                            <th>Capítulo</th>
+                            <th>Nota</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista_notas_aluno"></tbody>
+                </table>
             </div>
+        </div>
 
-            <br>
+        <br>
 
-            <div id="features-sec" class="container set-pad">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Tipo</th>
-                                <th>Disciplina</th>
-                                <th>Nota</th>
-                            </tr>
-                        </thead>
-                        <tbody id="lista_notas_aluno_provas"></tbody>
-                    </table>
-                </div>
+        <div id="features-sec" class="container set-pad">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Disciplina</th>
+                            <th>Nota</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista_notas_aluno_provas"></tbody>
+                </table>
             </div>
-        </main>
-        <!-- Main -->
+        </div>
+    </main>
+    <!-- Main -->
 
-        <!--  Jquery Core Script -->
-        <script src="../js/jquery.js"></script>
-        <!--  Core Bootstrap Script -->
-        <script src="../js/bootstrap.min.js"></script>
-        <!--  Flexslider Scripts -->
-        <script src="../js/jquery.flexslider.js"></script>
-        <!--  Scrolling Reveal Script -->
-        <script src="../js/scrollReveal.js"></script>
-        <!--  Scroll Scripts -->
-        <script src="../js/jquery.easing.min.js"></script>
-        <!--  Custom Scripts -->
-        <script src="../js/custom.js"></script>
-        <script
-            src="https://kit.fontawesome.com/88ea2c002f.js"
-            crossorigin="anonymous"
-        ></script>
-        
-        <script type="module" src="../js/alunos/carrega_notas.js"></script>
+    <!--  Jquery Core Script -->
+    <script src="../js/jquery.js"></script>
+    <!--  Core Bootstrap Script -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!--  Flexslider Scripts -->
+    <script src="../js/jquery.flexslider.js"></script>
+    <!--  Scrolling Reveal Script -->
+    <script src="../js/scrollReveal.js"></script>
+    <!--  Scroll Scripts -->
+    <script src="../js/jquery.easing.min.js"></script>
+    <!--  Custom Scripts -->
+    <script src="../js/custom.js"></script>
+    <script src="https://kit.fontawesome.com/88ea2c002f.js" crossorigin="anonymous"></script>
 
-        <script type="module" src="../js/alunos/carrega_notas_provas.js"></script>
-    </body>
+    <script type="module" src="../js/alunos/carrega_notas.js"></script>
+
+    <script type="module" src="../js/alunos/carrega_notas_provas.js"></script>
+</body>
+
 </html>

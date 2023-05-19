@@ -1,4 +1,5 @@
-import { disc } from "../disciplinas.js";
+import { disc } from "../disciplinas.js"
+import {urlHomologacaoLeitura} from "../urls.js"
 
 $(document).ready(function () {
     carregar();
@@ -7,12 +8,8 @@ $(document).ready(function () {
 async function carregar() {
     var caixa1 = [];
     var caixa2 = [];
-    const rq1 = await fetch(
-        "http://localhost/avaq/assets/php/read/provas.php"
-    );
-    const rq2 = await fetch(
-        "http://localhost/avaq/assets/php/read/respostas_provas.php"
-    );
+    const rq1 = await fetch(`${urlHomologacaoLeitura}provas.php`)
+    const rq2 = await fetch(`${urlHomologacaoLeitura}respostas_provas.php`)
     const rs1 = await rq1.json();
     const rs2 = await rq2.json();
     let nome = sessionStorage.getItem("logado");

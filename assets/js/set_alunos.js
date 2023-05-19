@@ -1,9 +1,11 @@
+import {urlHomologacaoLeitura} from "./urls.js"
+
 $(document).ready(function(){
     alunos()
 })
 
 async function alunos() {
-    const rq = await fetch("http://localhost/avaq/assets/php/read/usuarios.php")
+    const rq = await fetch(`${urlHomologacaoLeitura}usuarios.php`)
     const rs = await rq.json()
     let validacao = sessionStorage.getItem("tipo")
     if (rs["status"]) {
