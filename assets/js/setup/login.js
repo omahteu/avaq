@@ -19,7 +19,7 @@ async function validacao(usuario, senha) {
                 window.location.href = `${urlPagina}professor.html`
             } else {
                 sessionStorage.setItem("logado", v1[0]["usuario"])
-                sessionStorage.setItem("tipo", "professor")
+                sessionStorage.setItem("tipo", "aluno")
                 sessionStorage.setItem("disc", "")
                 window.location.href = `${urlPagina}aluno.html`
             }
