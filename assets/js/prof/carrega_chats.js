@@ -41,8 +41,13 @@ async function chats_ativos() {
                                         <td>${i.rm}</td>
                                         <td>${i.dia}</td>
                                         <td>${i.mensagem}</td>
-                                        <td><textarea class="form-control" name="" id="" rows="3"></textarea></td>
-                                        <td><button type="button" class="btn btn-primary">Responder</button></td>
+                                        <td>
+                                            <form method="post" id="respondendochat">
+                                                <input type="text" id="hashemsg" name="hashemsg" value="${i.hashe}" readonly hidden>
+                                                <textarea class="form-control" name="resp" id="resp" rows="3"></textarea><br>
+                                                <button type="button" class="btn btn-primary" id="responderchat">Responder</button>
+                                            </form>
+                                        </td>
                                     </tr>
 
                                     `
