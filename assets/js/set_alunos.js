@@ -1,0 +1,18 @@
+$(document).ready(function(){
+    alunos()
+})
+
+async function alunos() {
+    const rq = await fetch("http://localhost/avaq/assets/php/read/usuarios.php")
+    const rs = await rq.json()
+    let validacao = sessionStorage.getItem("tipo")
+    if (rs["status"]) {
+        let dados = rs["dados"]
+        let alunos = dados.filter(x => x.tipo == "aluno")
+        if (validacao == "professor") {
+            Object.keys(alunos).forEach((item) => {
+                $('#disciplinas').append(`<option value="${alunos[item]["usuario"]}">${alunos[item]["nome"]}</option>`);
+            });
+        }
+    }
+}
