@@ -1,4 +1,5 @@
 import {urlHomologacaoLeitura} from "../urls.js"
+import {urlPagina} from "../urls.js"
 
 $(document).on("click", "#acessar", function() {
     validacao($("#usuario").val(), $("#senha").val())
@@ -15,12 +16,12 @@ async function validacao(usuario, senha) {
                 sessionStorage.setItem("logado", v1[0]["nome"])
                 sessionStorage.setItem("tipo", "professor")
                 sessionStorage.setItem("disc", v1[0]["disciplina"])
-                window.location.href = "http://localhost/avaq/assets/pages/professor.html";
+                window.location.href = `${urlPagina}professor.html`
             } else {
                 sessionStorage.setItem("logado", v1[0]["nome"])
                 sessionStorage.setItem("tipo", "professor")
                 sessionStorage.setItem("disc", "")
-                window.location.href = "http://localhost/avaq/assets/pages/aluno.html";
+                window.location.href = `${urlPagina}aluno.html`
             }
         } else {
             alert("Usuário/Senha Inválido!")
