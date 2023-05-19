@@ -1,9 +1,11 @@
+import {urlInsercao} from "./urls.js"
+
 $(document).on("click", "#comentar", function() {
     let respostas = $("#comentarios").serialize()
     $.ajax({
         type: 'POST',
         dataType: 'json',
-        url: "http://localhost/avaq/assets/php/insert/chat.php",
+        url: `${urlInsercao}chat.php`,
         async: true,
         data: respostas
     });

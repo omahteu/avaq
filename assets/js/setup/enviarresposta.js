@@ -1,3 +1,5 @@
+import {urlInsercao} from "../urls.js"
+
 $(document).on("click", "#respondendo", function() {
     let sufixo = $(this).attr("data-toggle")
     let ide = `#exerciciosalunos${sufixo}`
@@ -5,7 +7,7 @@ $(document).on("click", "#respondendo", function() {
     $.ajax({
         type: 'POST',
         dataType: 'json',
-        url: "http://localhost/avaq/assets/php/insert/respostaexercicios.php",
+        url: `${urlInsercao}respostaexercicios.php`,
         async: true,
         data: respostas
     });
