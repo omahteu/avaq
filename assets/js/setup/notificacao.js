@@ -13,31 +13,31 @@ async function notificacoes() {
         let hoje = String(dataHoje())
 
         if (moment(hoje).isSame(String(dados["modulo1"]))) {
-            console.log('ativar1')
+            sessionStorage.setItem("modulo", "1")
         } else if (moment(hoje).isAfter(String(dados["modulo1"])) && moment(hoje).isBefore(String(dados["modulo2"]))) {
-            console.log('ativar1')
+            sessionStorage.setItem("modulo", "1")
         } else if (moment(hoje).isSame(String(dados["modulo2"]))) {
-            console.log('ativar2')
+            sessionStorage.setItem("modulo", "2")
         } else if (moment(hoje).isAfter(String(dados["modulo2"])) && moment(hoje).isBefore(String(dados["modulo3"]))) {
-            console.log('ativar2')
+            sessionStorage.setItem("modulo", "2")
         } else if (moment(hoje).isSame(String(dados["modulo3"]))) {
-            console.log('ativar3')
+            sessionStorage.setItem("modulo", "3")
         } else if (moment(hoje).isAfter(String(dados["modulo3"])) && moment(hoje).isBefore(String(dados["modulo4"]))) {
-            console.log('ativar3')
+            sessionStorage.setItem("modulo", "3")
         } else if (moment(hoje).isSame(String(dados["modulo4"]))) {
-            console.log('ativar4')
+            sessionStorage.setItem("modulo", "4")
         } else if (moment(hoje).isAfter(String(dados["modulo4"])) && moment(hoje).isBefore(String(dados["modulo5"]))) {
-            console.log('ativar4')
+            sessionStorage.setItem("modulo", "4")
         } else if (moment(hoje).isSame(String(dados["modulo5"]))) {
-            console.log('ativar5')
+            sessionStorage.setItem("modulo", "5")
         } else if (moment(hoje).isAfter(String(dados["modulo5"])) && moment(hoje).isBefore(String(dados["modulo6"]))) {
-            console.log('ativar5')
+            sessionStorage.setItem("modulo", "5")
         } else if (moment(hoje).isSame(String(dados["modulo6"]))) {
-            console.log('ativar6')
+            sessionStorage.setItem("modulo", "6")
         } else if (moment(hoje).isAfter(String(dados["modulo6"])) && moment(hoje).isBefore(String(dados["final"]))) {
-            console.log('ativar6')
+            sessionStorage.setItem("modulo", "6")
         } else if (moment(hoje).isSame(String(dados["final"]))) {
-            console.log('bloquear')
+            sessionStorage.setItem("modulo", "off")
         }
     }
 }
