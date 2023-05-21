@@ -13,6 +13,7 @@ async function carregar() {
     const rs1 = await rq1.json();
     const rs2 = await rq2.json();
     let nome = sessionStorage.getItem("logado");
+    let mod = sessionStorage.getItem("modulo")
     if (rs1["status"] && rs2["status"]) {
         let res1 = rs1["dados"];
         let res2 = rs2["dados"];
