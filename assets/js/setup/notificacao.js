@@ -10,17 +10,13 @@ async function notificacoes() {
     const rs = await rq.json()
     if (rs["status"]) {
         let dados = rs["dados"][0]
+        let hoje = String(dataHoje())
 
-        console.log()
-
-        if (moment(String(dataHoje())).isSame(String(dados["aulas_mod1"]))) {
+        if (moment(hoje).isSame(String(dados["aulas_mod1"]))) {
             console.log('ativar')
-        } else if (moment(String(dataHoje())).isAfter(String(dados["aulas_mod1"]))) {
-            console.log(ativar)
+        } else if (moment(hoje).isAfter(String(dados["aulas_mod1"])) && moment(hoje).isBefore(String(dados["aulas_mod2"]))) {
+            console.log('ativar2')
         }
 
-        // if(moment(String(dataHoje())).isSame(String(dataHoje())))
-        //     alert("Yep!");
     }
 }
-
