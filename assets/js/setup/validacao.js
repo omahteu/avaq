@@ -1,4 +1,4 @@
-import {urlHomologacaoLeitura} from "../urls.js"
+import {urlHomologacaoLeitura, home} from "../urls.js"
 
 $(document).ready(function() {
     validando()
@@ -10,13 +10,13 @@ async function validando() {
     let flag = sessionStorage.getItem("logado")
     
     if (flag == null) {
-        window.location.href = "http://localhost/avaq/"
+        window.location.href = home
     } else {
         if (rs["status"]) {
             let dados = rs["dados"]
             let filt = dados.filter(x => x.usuario == flag)
             if (filt.length == 0) {
-                window.location.href = "http://localhost/avaq/"
+                window.location.href = home
             }
         }
     }

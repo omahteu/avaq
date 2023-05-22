@@ -1,8 +1,10 @@
+import { home } from "../urls.js"
+
 $(document).on("click", "#sair", function() {
     sessionStorage.removeItem("logado")
     sessionStorage.removeItem("disc")
     sessionStorage.removeItem("tipo")
-    window.location.href = "http://localhost/avaq/"
+    window.location.href = home
 })
 
 $(document).on("click", "#sairchar", function() {
