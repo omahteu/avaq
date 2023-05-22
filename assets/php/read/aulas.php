@@ -1,13 +1,14 @@
 <?php
 include "../conexao.php";
 header("Acesso-Controle-Permitir-Origem: *");
-$query = "SELECT id, disciplina, url FROM avaqce_aulas";
+$query = "SELECT id, disciplina, capitulo, url FROM avaqce_aulas";
 $resultado = $conn->query($query);
 if ($resultado->num_rows > 0) {
     while($row = $resultado->fetch_assoc()) {
         $dados[] = [
             'id' => $row["id"],
             'disciplina' => $row["disciplina"],
+            'capitulo' => $row["capitulo"],
             'url' => $row["url"]
         ];
     }

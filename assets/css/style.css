@@ -273,3 +273,7 @@ h1::after {
 #ficha {
     display: grid;
 }
+
+#it, #bib, #vc, #mta {
+    visibility: hidden;
+}
