@@ -1,5 +1,6 @@
 import { modulus } from "../disciplinas.js"
 import {urlHomologacaoLeitura} from "../urls.js"
+import aulas_it from "../aulas/it.js";
 
 $(document).ready(function () {
     carregar();
@@ -15,12 +16,7 @@ async function carregar() {
         res1.forEach(e => {
             switch (e.disciplina) {
                 case 'it':
-                    e.capitulo == '1' ? $("#it1").attr("src", e.url) : 
-                    e.capitulo == '2' ? $("#it2").attr("src", e.url) : 
-                    e.capitulo == '3' ? $("#it3").attr("src", e.url) : 
-                    e.capitulo == '4' ? $("#it4").attr("src", e.url) : 
-                    e.capitulo == '5' ? $("#it5").attr("src", e.url) : 
-                    e.capitulo == '6' ? $("#it6").attr("src", e.url) : ''
+                    aulas_it(e)
                     break;
                 
                 case 'bib':
@@ -54,7 +50,6 @@ async function carregar() {
                     break;
             }
         });
-
         ativo.forEach(e => {
             $(`#${e}`).css("visibility", "visible")
         });
