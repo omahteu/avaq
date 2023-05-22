@@ -23,6 +23,6 @@ async function carregar() {
                                 <tr></tr>`
         });
     } else {
-        sessionStorage.setItem("erro", error);
+        sessionStorage.setItem("empty", "requisição voltou vázia");
     }
 }
