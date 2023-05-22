@@ -1,4 +1,4 @@
-import { disc, modulus } from "../disciplinas.js"
+import { disc} from "../disciplinas.js"
 import {urlHomologacaoLeitura} from "../urls.js"
 
 $(document).ready(function () {
@@ -6,7 +6,6 @@ $(document).ready(function () {
 });
 
 async function carregar() {
-    var caixa1 = [];
     const rq1 = await fetch(`${urlHomologacaoLeitura}notas.php`)
     const rs1 = await rq1.json();
     let nome = sessionStorage.getItem("logado")
@@ -16,9 +15,8 @@ async function carregar() {
         let tabe = document.getElementById("lista_notas_aluno")
         tabe.innerHTML = ""
         filtro.forEach(e => {
-
             tabe.innerHTML += `<tr></tr>
-                                    <td>Atividade</td>
+                                    <td>Exercícios</td>
                                     <td>${disc[e.disciplina]}</td>
                                     <td>${e.capitulo}</td>
                                     <td>${e.nota}</td>

@@ -7,7 +7,7 @@ $hs = $_POST["hash"];
 $ds = $_POST["disciplinas"];
 $ms = $_POST["mensagem"];
 $rs = "";
-$query = "insert into avaqce_chats(rm, hash, data, disciplina, mensagem, resposta) values(?, ?, ?, ?, ?, ?)";
+$query = "insert into avaqce_chats(rm, hashe, dia, disciplina, mensagem, resposta) values(?, ?, ?, ?, ?, ?)";
 
 if ($conn->connect_error) {
     echo "$conn->connect_error";

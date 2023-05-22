@@ -10,5 +10,5 @@ $(document).on("click", "#comentar", function() {
         data: respostas
     });
     $("#comentarios"). each (function(){ this. reset(); })
-    alert("Exercício respondido com sucesso!")
+    alert("Aguarde a resposta do professor!")
 })

@@ -11,6 +11,6 @@ $(document).on("click", "#respondendo", function() {
         async: true,
         data: respostas
     });
-    $(ide). each (function(){ this. reset(); })
     alert("Exercício respondido com sucesso!")
+    location.reload()
 })
