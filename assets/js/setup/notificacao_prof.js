@@ -39,8 +39,8 @@ async function notf_chat() {
 async function notf_exercicios() {
     var caixa1 = [];
     var caixa2 = [];
-    const rq1 = await fetch(`${urlHomologacaoLeitura}exercicios.php`)
-    const rq2 = await fetch(`${urlHomologacaoLeitura}respostas.php`);
+    const rq1 = await fetch(`${urlHomologacaoLeitura}respostas.php`)
+    const rq2 = await fetch(`${urlHomologacaoLeitura}correcoes.php`);
     const rs1 = await rq1.json();
     const rs2 = await rq2.json();
     let eudisciplina = sessionStorage.getItem('disc')
@@ -110,7 +110,6 @@ async function notf_provas() {
             caixa2.push(e.cod);
         });
         let r3 = caixa1.filter((a) => !caixa2.includes(a));
-        console.log(r3)
         let respondidas = res1.filter(i => r3.includes(i.cod))
         let paramim = respondidas.filter(l => l.disciplina == eudisciplina)
         if (paramim.length > 0) {

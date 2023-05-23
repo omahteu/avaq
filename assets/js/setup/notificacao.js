@@ -4,6 +4,7 @@ import emitir from "./popup.js"
 
 $(document).ready(function() {
     notificacoes()
+    notf_chat()
 })
 
 async function notificacoes() {
@@ -54,5 +55,33 @@ async function notificacoes() {
                 sessionStorage.setItem("modulo", "off")
             }
         }
+    }
+}
+
+async function notf_chat() {
+    const rq = await fetch(`${urlHomologacaoLeitura}chats.php`)
+    const rs = await rq.json()
+    let nome = sessionStorage.getItem("logado")
+    if (rs["status"]) {
+        let dados = rs["dados"]
+        let disc = sessionStorage.getItem("disc")
+        let filtro_disciplina = dados.filter(x => x.disciplina == nome)
+        filtro_disciplina.forEach(e => {
+            if (e.resposta == ""){
+                $("#notificacao").append(
+                    `
+                    <div class="col-lg-4 col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
+                        <div class="about-div">
+                            <i class="fa-solid fa-comments-o fa-4x"></i>
+                            <h3>Chat Aberto!</h3>
+                            <p>
+                                Você recebeu a resposta de um professor!
+                            </p>
+                        </div>
+                    </div>
+                    `
+                )
+            }
+        });
     }
 }

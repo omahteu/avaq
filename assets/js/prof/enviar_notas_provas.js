@@ -11,5 +11,6 @@ $(document).on("click", "#respondendo", function() {
         async: true,
         data: respostas
     });
-    alert("Exercício corrigido com sucesso!")
+    alert("Avaliação corrigida com sucesso!")
+    location.reload()
 })
