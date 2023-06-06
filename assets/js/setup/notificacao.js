@@ -64,11 +64,10 @@ async function notf_chat() {
     let nome = sessionStorage.getItem("logado")
     if (rs["status"]) {
         let dados = rs["dados"]
-        let disc = sessionStorage.getItem("disc")
         let filtro_disciplina = dados.filter(x => x.disciplina == nome)
         filtro_disciplina.forEach(e => {
             if (e.resposta == ""){
-                $("#notificacao").append(
+                $("#notific").append(
                     `
                     <div class="col-lg-4 col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
                         <div class="about-div">
