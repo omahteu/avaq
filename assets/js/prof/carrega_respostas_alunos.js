@@ -94,11 +94,10 @@ async function carregar() {
                                             <input type="text" id="rm" name="rm" value="${e.rm}" hidden>
                                             <input type="text" id="ds" name="ds" value="${e.disciplina}" hidden>
                                             <input type="text" id="cap" name="cap" value="${e.capitulo  }" hidden>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <input text="text" id="nota" name="nota" placeholder="Nota">
-                                            <button type="button" class="btn btn-primary" id="respondendo" data-toggle="${e.capitulo}${e.disciplina}">Enviar Nota</button>
-                                        </div>
+                                            <div class="modal-footer">
+                                                <input text="text" id="nota" name="nota" placeholder="Nota">
+                                                <button type="button" class="btn btn-primary" id="respondendo" data-toggle="${e.capitulo}${e.disciplina}">Enviar Nota</button>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -183,11 +182,10 @@ async function carregar() {
                                         <input type="text" id="rm" name="rm" value="${e.rm}" hidden>
                                         <input type="text" id="ds" name="ds" value="${e.disciplina}" hidden>
                                         <input type="text" id="cap" name="cap" value="${e.capitulo  }" hidden>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <input text="text" id="nota" name="nota" placeholder="Nota">
-                                        <button type="button" class="btn btn-primary" id="respondendo" data-toggle="${e.capitulo}${e.disciplina}">Enviar Nota</button>
-                                    </div>
+                                        <div class="modal-footer">
+                                            <input text="text" id="nota" name="nota" placeholder="Nota">
+                                            <button type="button" class="btn btn-primary" id="respondendo" data-toggle="${e.capitulo}${e.disciplina}">Enviar Nota</button>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
