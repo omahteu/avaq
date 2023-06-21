@@ -12,6 +12,7 @@ $(document).ready(function() {
 async function notf_chat() {
     const rq = await fetch(`${urlHomologacaoLeitura}chats.php`)
     const rs = await rq.json()
+    console.log(rs)
     if (rs["status"]) {
         let dados = rs["dados"]
         let disc = sessionStorage.getItem("disc")

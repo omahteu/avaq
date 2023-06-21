@@ -17,6 +17,6 @@ if ($resultado->num_rows > 0) {
     }
     $retorna = ['status' => true, 'dados' => $dados];
 } else {
-    $retorna = ['status' => false, 'msg' => "ERRO"];
+    $retorna = ['status' => false, 'msg' => "vazio"];
 }
 echo json_encode($retorna);
